@@ -4,10 +4,12 @@
             <div class="columns">
                 <div class="column">
                      <p class="is-size-5">Category</p>
-                </div>                            
-                    <div class="control is-rounded has-icons-right">                       
+                </div>                      
+                    <div class="control is-rounded has-icons-right">      
+                        
                         <input class="input" type="text" placeholder="Search">
                         <span class="icon is-small is-right">
+                            <font-awesome-icon icon="search"></font-awesome-icon>                 
                         <i class="fa fa-search" aria-hidden="true"></i>
                         </span>            
                     </div>
