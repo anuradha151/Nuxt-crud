@@ -16,5 +16,6 @@
         </a>
       </div>
     </div>
+    <hr>
   </div>
 </template>
