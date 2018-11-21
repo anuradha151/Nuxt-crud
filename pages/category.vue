@@ -36,11 +36,17 @@
                     </div>
                 </div>  
             </div>                                                    
-        </div>               
+        </div> 
+        <main-category></main-category>              
     </div>
 </template>
 <script>
+import mainCategory from 'componentscategorymain-category.vue'
+
 export default {
+  components: {
+    'main-category': mainCategory
+  },
   layout: 'cms'
 }
 </script>

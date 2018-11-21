@@ -75,6 +75,12 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    
+}
+</script>
+
 <style>
 .menu {
   background-color: #19d88e;
