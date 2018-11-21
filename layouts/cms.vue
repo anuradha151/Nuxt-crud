@@ -17,7 +17,7 @@
                             <li><a href="#">Content</a></li>
                             <li><a href="#">Menu Structure</a></li>
                             <li><a href="#">Link Content</a></li>
-                            <li><a href="#">Notifications</a></li>
+                            <li><a href="#">Notifications</a></li> 
                             <li><a href="#">Pricing</a></li>
                         </ul>
                         <p class="menu-label">

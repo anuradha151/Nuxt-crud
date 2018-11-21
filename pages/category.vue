@@ -5,7 +5,7 @@
                 <div class="column">
                      <p class="is-size-5">
                      <span class="icon is-small is-left">
-                          <font-awesome-icon icon="dot-circle"></font-awesome-icon>  
+                          <font-awesome-icon class="has-text-success" icon="dot-circle"></font-awesome-icon>  
                      </span>                    
                     Category</p>
                 </div>   
