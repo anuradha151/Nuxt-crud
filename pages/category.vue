@@ -54,7 +54,7 @@
 <script>
 export default {
   layout: 'cms'
-}
+}``
 </script>
 
 <style>
