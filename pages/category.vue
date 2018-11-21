@@ -18,11 +18,11 @@
                     </div>
                 </div>                
             </div> 
-            <hr>  
-            <div class="crop-id-selector">
-                <div class="field is-horizontal">
+            <hr>          
+            <div class="level">
+                <div class="field is-horizontal level-left">
                     <div class="field-label is-normal">
-                        <p class="is-size-6">Crop ID</p>
+                        <p class="is-size-6" id="label-crop-id">Crop ID</p>
                     </div>
                     <div class="field-body">
                         <div class="control">   
@@ -34,24 +34,9 @@
                             </div>
                         </div>                   
                     </div>
-                </div>
-            </div>                                           
-        </div> 
-        <div class="field-section">
-            <div class="field">
-                <label class="label">Name</label>                  
-                <div class="control">
-                    <input class="input" type="text" placeholder="e.g Alex Smith">
-                </div>
-            </div>  
-                    
-            <div class="field">
-                <label class="label">Email</label>
-                <div class="control">
-                    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-                </div>
-            </div>       
-        </div>                
+                </div>  
+            </div>                                                    
+        </div>               
     </div>
 </template>
 <script>
@@ -67,6 +52,8 @@ export default {
 .field-section {
   width: 400px;
 }
-
+#label-crop-id {
+  width: 75px;
+}
 </style>
 
