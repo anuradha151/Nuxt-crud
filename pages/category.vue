@@ -36,7 +36,17 @@
         </div>
       </div>
     </div>
-    <main-category></main-category>
+    <div class="columns">
+      <div class="column">
+        <main-category></main-category>
+      </div>
+      <div class="column">
+        <main-category></main-category>
+      </div>
+      <div class="column">
+        <main-category></main-category>
+      </div>
+    </div>
   </div>
 </template>
 <script>

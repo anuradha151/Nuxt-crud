@@ -4,7 +4,7 @@
       <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" id="txtName" type="text" placeholder="e.g Alex Smith">
+          <input class="input" v-model="txtName" id="txtName" type="text" placeholder="e.g Alex Smith">
         </div>
       </div>
       <div class="field">
