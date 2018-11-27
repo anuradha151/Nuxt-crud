@@ -48,6 +48,14 @@
         </p>
       </div>
     </div>
+    <div class="reload-button">
+      <a class="button is-success">
+        <span class="icon is-small">
+          <font-awesome-icon icon="circle"></font-awesome-icon>
+        </span>
+        <span>Reload</span>
+      </a>
+    </div>
     <div class="customer-table">
       <table class="table is-striped is-hoverable">
         <tr>
