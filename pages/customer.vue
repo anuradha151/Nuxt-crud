@@ -37,7 +37,7 @@
       </div>
       <div class="field is-grouped is-grouped-right">
         <p class="control">
-          <a v-on:click="save" id="btnSave" class="button is-primary">
+          <a v-on:click="save('Hai Anuradha')" id="btnSave" class="button is-primary">
             Submit
           </a>
         </p>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="reload-button">
-      <a class="button is-success">
+      <a v-on:click="fetchSomething" class="button is-success">
         <span class="icon is-small">
           <font-awesome-icon icon="circle"></font-awesome-icon>
         </span>
@@ -66,63 +66,6 @@
           <th>N.I.C</th>
           <th>Passport ID</th>
         </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-        <tr>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-          <td>asdkjashdjaskjd</td>
-        </tr>
-
       </table>
     </div>
   </div>
@@ -132,9 +75,22 @@
   export default {
     name: 'customer',
     layout: 'cms',
+    data() {
+      return {
+        customers: ''
+      }
+    },
     methods: {
       save: function(message) {
         alert(message)
+      },
+      reload: function() {
+
+      },
+      async fetchSomething() {
+        // let ip = await this.$axios.$get('http://localhost:8081/api/car/customer')
+        let customers = await this.$axios.$get('http://localhost:8081/api/car/customer')
+        console.log(customers[0])
       }
     }
   }
