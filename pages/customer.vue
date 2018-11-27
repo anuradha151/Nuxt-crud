@@ -4,13 +4,13 @@
       <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" v-model="txtName" id="txtName" type="text" placeholder="e.g Alex Smith">
+          <input class="input" v-model="name" type="text" placeholder="e.g Alex Smith">
         </div>
       </div>
       <div class="field">
         <label class="label">Address</label>
         <div class="control">
-          <input class="input" id="txtAddress" type="text" placeholder="e.g Galle">
+          <input class="input" v-model="address" type="text" placeholder="e.g Galle">
         </div>
       </div>
       <div class="field">
@@ -37,7 +37,7 @@
       </div>
       <div class="field is-grouped is-grouped-right">
         <p class="control">
-          <a v-on:click="save('hi')" id="btnSave" class="button is-primary">
+          <a v-on:click="save" id="btnSave" class="button is-primary">
             Submit
           </a>
         </p>
