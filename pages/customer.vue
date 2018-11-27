@@ -57,7 +57,8 @@
       </a>
     </div>
     <div class="customer-table">
-      <table class="table is-striped is-hoverable">
+      <table class="table is-striped is-fullwidth is-hoverable">
+        <thead>
         <tr>
           <th>Customer ID</th>
           <th>Name</th>
@@ -66,6 +67,10 @@
           <th>N.I.C</th>
           <th>Passport ID</th>
         </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
       </table>
     </div>
   </div>
@@ -88,7 +93,6 @@
 
       },
       async fetchSomething() {
-        // let ip = await this.$axios.$get('http://localhost:8081/api/car/customer')
         let customers = await this.$axios.$get('http://localhost:8081/api/car/customer')
         console.log(customers[0])
       }
