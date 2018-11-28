@@ -82,7 +82,8 @@
     layout: 'cms',
     data() {
       return {
-        customers: ''
+        customers: [],
+        errors: []
       }
     },
     methods: {
@@ -93,8 +94,17 @@
 
       },
       async fetchSomething() {
-        let customers = await this.$axios.$get('http://localhost:8081/api/car/customer')
-        console.log(customers[0])
+        await this.$axios.$get('http://localhost:8081/api/car/customer')
+          .then(response => {
+            // JSON responses are automatically parsed.
+            this.customers = response.data
+
+          })
+          .catch(e => {
+            this.errors.push(e)
+          })
+        console.log(customers)
+
       }
     }
   }
