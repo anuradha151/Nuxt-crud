@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="reload-button">
-      <a v-on:click="fetchSomething" class="button is-success">
+      <a class="button is-success">
         <span class="icon is-small">
           <font-awesome-icon icon="circle"></font-awesome-icon>
         </span>
@@ -69,7 +69,14 @@
         </tr>
         </thead>
         <tbody>
-
+        <tr v-for="(customer, index) in customers" :key="index">
+          <td>{{ customer.id }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.address }}</td>
+          <td>{{ customer.nic }}</td>
+          <td>{{ customer.passport }}</td>
+        </tr>
         </tbody>
       </table>
     </div>
@@ -80,10 +87,19 @@
   export default {
     name: 'customer',
     layout: 'cms',
+
+    async asyncData( { app }) {
+      let customers = await app.$axios.$get('http://localhost:8081/api/car/customer')
+      return {
+        customers
+      }
+    },
+
     data() {
       return {
-        customers: [],
-        errors: []
+        errors: [],
+        name: '',
+        address: ''
       }
     },
     methods: {
@@ -91,19 +107,6 @@
         alert(message)
       },
       reload: function() {
-
-      },
-      async fetchSomething() {
-        await this.$axios.$get('http://localhost:8081/api/car/customer')
-          .then(response => {
-            // JSON responses are automatically parsed.
-            this.customers = response.data
-
-          })
-          .catch(e => {
-            this.errors.push(e)
-          })
-        console.log(customers)
 
       }
     }
