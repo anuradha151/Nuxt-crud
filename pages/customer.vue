@@ -57,7 +57,7 @@
       </a>
     </div>
     <div class="customer-table">
-      <table class="table is-striped is-fullwidth is-hoverable">
+      <table class="table is-bordered is-fullwidth is-hoverable">
         <thead>
         <tr>
           <th>Customer ID</th>
@@ -88,7 +88,7 @@
     name: 'customer',
     layout: 'cms',
 
-    async asyncData( { app }) {
+    async asyncData({ app }) {
       let customers = await app.$axios.$get('http://localhost:8081/api/car/customer')
       return {
         customers
